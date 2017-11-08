@@ -1,0 +1,23 @@
+﻿
+<style type="text/css">
+.error_404{background:url(res/img/404.png) no-repeat; width:490px;padding-top:65px;margin:75px auto 0 auto;}
+.error_404 h2{font-size:22px; padding-left:154px;}
+.error_404 p{padding-left:154px; line-height:35px;}
+.reindex{padding-left:154px;}
+.reindexBtn{width:115px; height:35px; font-size:14px;  color:#fff; background:#2DA9FA; display:block; line-height:35px; text-align:center;border-radius: 3px; margin-top:20px;}
+.reindexBtn:hover{
+	color:#ffffff;
+}
+</style>
+
+</head>
+<body style="background-color:#ffffff;">
+ <div class="error_404">
+    
+    <h2>非常遗憾，您访问的页面不存在！</h2>
+    <p></p>
+    <div class="reindex"><a class="reindexBtn" href="http://www.uileader.com">返回首页</a></div>
+    
+    </div>
+</body>
+</html>

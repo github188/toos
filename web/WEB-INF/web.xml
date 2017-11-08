@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <!--配置servlet控制器-->
+    <servlet>
+        <servlet-name>mvcServlet</servlet-name>
+        <servlet-class>cn.cupcat.controller.MvcController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvcServlet</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+
+    <!--同一字符编码为UTF-8-->
+    <filter>
+        <filter-name>encodeFilter</filter-name>
+        <filter-class>cn.cupcat.filter.EncodeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodeFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+    <!--配置权限过滤器-->
+    <filter>
+        <filter-name>authorityFilter</filter-name>
+        <filter-class>cn.cupcat.filter.AuthorityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>authorityFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+
+</web-app>
